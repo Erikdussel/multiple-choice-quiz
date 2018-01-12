@@ -25,6 +25,7 @@ function showProgress() {
     var currentQuestionNumber = quiz.questionIndex + 1;
     var el = document.getElementById("progress");
     el.innerHTML = "Question " + '<b>' + currentQuestionNumber + "/" + quiz.questions.length + '</b>';
+    el.innerHTML += "\n Points: " + '<b>' + quiz.score + '</b>';
 };
 function showScores() {
     var gameOverHTML = "<h1>Result</h1>";

@@ -2,19 +2,20 @@ body {
     background-color: #83b3d8;
 }
 .quiz-container {
-    width: 90vw;
+    width: 80vw;
     height: 90vh;
     margin: 0 auto;
     background-color: #ffffffff;
-    border-radius: 50px;
+    border-radius: 40px 40px 50px 50px;
 }
 .quiz-container h1 {
     font-family: "sans-serif";
-    background-color: #004a83;
+    background-color: #0d316b;
     font-size: 30px;
     text-align: center;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
     height: 2%;
-    border-radius: 50px;
 }
 #score {
     color: #5A6772;
@@ -23,7 +24,8 @@ body {
 }
 .quiz-container #question {
     text-align: center;
-    font-size: 15px;
+    font-size: 20px;
+    font-weight: bold;
     color: #5A6772;
 }
 
@@ -32,10 +34,10 @@ body {
 }
 
 #btn0, #btn1, #btn2, #btn3, #replay-btn {
-    background-color: #778897;
+    background-color: #9bc1ff;
     width: 50%;
     font-size: 20px;
-    color: #fff;
+    color: #000;
     border-radius: 50px;
     padding: 10px 10px;
 }
@@ -46,7 +48,7 @@ body {
     border-radius: 50px;
     width: 30vw;
     padding: 10px 60px;
-    background-color: #7a8ca8;
+    background-color: #0d316b;
 }
 #flag {
     display: block;
@@ -57,7 +59,8 @@ body {
 
 #btn0:hover, #btn1:hover, #btn2:hover, #btn3:hover {
     cursor: pointer;
-    background-color: #57636e;
+    background-color: #0d316b;
+    color: white;
 }
 #btn0:focus, #btn1:focus, #btn2:focus, #btn3:focus, #replay-btn:focus {
     outline: 0;
@@ -73,6 +76,6 @@ body {
 #progress {
     color: #2b2b2b;
     text-align: center;
-    font-size: 10px;
+    font-size: 18px;
     width: 20%;
 }
