@@ -1,0 +1,78 @@
+body {
+    background-color: #83b3d8;
+}
+.quiz-container {
+    width: 90vw;
+    height: 90vh;
+    margin: 0 auto;
+    background-color: #ffffffff;
+    border-radius: 50px;
+}
+.quiz-container h1 {
+    font-family: "sans-serif";
+    background-color: #004a83;
+    font-size: 30px;
+    text-align: center;
+    height: 2%;
+    border-radius: 50px;
+}
+#score {
+    color: #5A6772;
+    text-align: center;
+    font-size: 30px;
+}
+.quiz-container #question {
+    text-align: center;
+    font-size: 15px;
+    color: #5A6772;
+}
+
+.buttons {
+    margin-top: 30px;
+}
+
+#btn0, #btn1, #btn2, #btn3, #replay-btn {
+    background-color: #778897;
+    width: 50%;
+    font-size: 20px;
+    color: #fff;
+    border-radius: 50px;
+    padding: 10px 10px;
+}
+.flag-container {
+    display: table;
+    margin: 0 auto;
+    min-height: 15vh;
+    border-radius: 50px;
+    width: 30vw;
+    padding: 10px 60px;
+    background-color: #7a8ca8;
+}
+#flag {
+    display: block;
+    max-width: 15vw;
+    max-height: 15vh;
+    margin: auto;
+}
+
+#btn0:hover, #btn1:hover, #btn2:hover, #btn3:hover {
+    cursor: pointer;
+    background-color: #57636e;
+}
+#btn0:focus, #btn1:focus, #btn2:focus, #btn3:focus, #replay-btn:focus {
+    outline: 0;
+}
+#showAnswer {
+    text-align: center;
+    border-radius: 50px;
+    font-size: 20px;
+    margin: 10px 40px 10px 0px;
+    padding: 20px 20px;
+    color: white;
+}
+#progress {
+    color: #2b2b2b;
+    text-align: center;
+    font-size: 10px;
+    width: 20%;
+}
