@@ -9,7 +9,6 @@ body {
     border-radius: 40px 40px 50px 50px;
 }
 .quiz-container h1 {
-    font-family: "sans-serif";
     background-color: #0d316b;
     font-size: 30px;
     text-align: center;
@@ -38,17 +37,21 @@ body {
     width: 50%;
     font-size: 20px;
     color: #000;
-    border-radius: 50px;
+    border-radius: 10px;
     padding: 10px 10px;
+    box-shadow: 10px 10px 5px #aaaaaa;
+
 }
 .flag-container {
     display: table;
     margin: 0 auto;
     min-height: 15vh;
-    border-radius: 50px;
+    border-radius: 10px;
     width: 30vw;
     padding: 10px 60px;
     background-color: #0d316b;
+    box-shadow: 10px 10px 5px #aaaaaa;
+
 }
 #flag {
     display: block;
@@ -69,7 +72,6 @@ body {
     text-align: center;
     border-radius: 50px;
     font-size: 20px;
-    margin: 10px 40px 10px 0px;
     padding: 20px 20px;
     color: white;
 }
