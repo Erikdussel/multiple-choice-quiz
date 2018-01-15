@@ -10,7 +10,7 @@ function populate() {
         for(var i = 0; i < choices.length; i++) {
             var el = document.getElementById("choice" + i);
             el.innerHTML = choices[i];
-            guess("btn" + i, choices[i]);
+            guess("button" + i, choices[i]);
         } showProgress();
     }
 };
@@ -30,7 +30,7 @@ function showProgress() {
 function showScores() {
     var gameOverHTML = "<h1>Result</h1>";
     gameOverHTML += "<h2 id='score'> You scored " + multipleChoiceQuiz.score + " out of " + multipleChoiceQuiz.questionIndex + "</h2>";
-    gameOverHTML += "<button id='replay-btn' onClick='location.reload()'> TRY AGAIN </button>";
+    gameOverHTML += "<button id='replay-button' onClick='location.reload()'> TRY AGAIN </button>";
     var el = document.getElementById("quiz");
     el.innerHTML = gameOverHTML;
 };
@@ -47,6 +47,6 @@ function shuffleQuestions(questions) {
 };
 shuffleQuestions();
 // create quiz
-var multipleChoiceQuiz = new Quiz(questions);
+var multipleChoiceQuiz = new quiz(questions);
 // call populate
 populate();
