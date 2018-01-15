@@ -1,12 +1,12 @@
 // 
 function populate() {
-    if(quiz.finished()) {
+    if(multipleChoiceQuiz.finished()) {
         showScores();
     } else {
         // show flag
-        document.getElementById('flag').src = quiz.getCurrentQuestion().flag;
+        document.getElementById('flag').src = multipleChoiceQuiz.getCurrentQuestion().flag;
         // show multiplechoice
-        var choices = quiz.getCurrentQuestion().choices;
+        var choices = multipleChoiceQuiz.getCurrentQuestion().choices;
         for(var i = 0; i < choices.length; i++) {
             var el = document.getElementById("choice" + i);
             el.innerHTML = choices[i];
@@ -17,19 +17,19 @@ function populate() {
 function guess(id, guess) {
     var button = document.getElementById(id);
     button.onclick = function() {
-        quiz.guess(guess);
+        multipleChoiceQuiz.guess(guess);
         populate();
     }
 };
 function showProgress() {
-    var currentQuestionNumber = quiz.questionIndex + 1;
+    var currentQuestionNumber = multipleChoiceQuiz.questionIndex + 1;
     var el = document.getElementById("progress");
-    el.innerHTML = "Question " + '<b>' + currentQuestionNumber + "/" + quiz.questions.length + '</b>';
-    el.innerHTML += "\n Points: " + '<b>' + quiz.score + '</b>';
+    el.innerHTML = "Question " + '<b>' + currentQuestionNumber + "/" + multipleChoiceQuiz.questions.length + '</b>';
+    el.innerHTML += "\n Points: " + '<b>' + multipleChoiceQuiz.score + '</b>';
 };
 function showScores() {
     var gameOverHTML = "<h1>Result</h1>";
-    gameOverHTML += "<h2 id='score'> You scored " + quiz.score + " out of " + quiz.questionIndex + "</h2>";
+    gameOverHTML += "<h2 id='score'> You scored " + multipleChoiceQuiz.score + " out of " + multipleChoiceQuiz.questionIndex + "</h2>";
     gameOverHTML += "<button id='replay-btn' onClick='location.reload()'> TRY AGAIN </button>";
     var el = document.getElementById("quiz");
     el.innerHTML = gameOverHTML;
@@ -47,6 +47,6 @@ function shuffleQuestions(questions) {
 };
 shuffleQuestions();
 // create quiz
-var quiz = new Quiz(questions);
+var multipleChoiceQuiz = new Quiz(questions);
 // call populate
 populate();

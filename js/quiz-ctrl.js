@@ -1,13 +1,13 @@
-function Quiz(questions) {
+function quiz(questions) {
     this.score = 0;
     this.questions = questions;
     this.questionIndex = 0;
 }
-Quiz.prototype.getCurrentQuestion = function() {
+quiz.prototype.getCurrentQuestion = function() {
 
     return this.questions[this.questionIndex];
 }
-Quiz.prototype.guess = function(answer) {
+quiz.prototype.guess = function(answer) {
     if(this.getCurrentQuestion().isCorrectAnswer(answer)) {
     	var correctAnswer = document.getElementById('showAnswer');
     	correctAnswer.style.backgroundColor = 'green';
@@ -17,6 +17,6 @@ Quiz.prototype.guess = function(answer) {
     	wrongAnswer.style.backgroundColor = 'red';
     } this.questionIndex++;
 }
-Quiz.prototype.finished = function() {
+quiz.prototype.finished = function() {
     return this.questionIndex === this.questions.length;
 }
