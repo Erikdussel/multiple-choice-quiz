@@ -1,5 +1,4 @@
-// 
-function populate() {
+function showQuestion() {
     if(multipleChoiceQuiz.finished()) {
         showScores();
     } else {
@@ -10,22 +9,24 @@ function populate() {
         for(var i = 0; i < choices.length; i++) {
             var el = document.getElementById("choice" + i);
             el.innerHTML = choices[i];
+            el.style.fontFamily = 'Verdana, Geneva, sans';
             guess("button" + i, choices[i]);
         } showProgress();
     }
 };
-function guess(id, guess) {
+function guess(id, input) {
     var button = document.getElementById(id);
     button.onclick = function() {
-        multipleChoiceQuiz.guess(guess);
-        populate();
+        multipleChoiceQuiz.guess(input);
+        showQuestion();
     }
 };
 function showProgress() {
     var currentQuestionNumber = multipleChoiceQuiz.questionIndex + 1;
     var el = document.getElementById("progress");
-    el.innerHTML = "Question " + '<b>' + currentQuestionNumber + "/" + multipleChoiceQuiz.questions.length + '</b>';
-    el.innerHTML += "\n Points: " + '<b>' + multipleChoiceQuiz.score + '</b>';
+        el.innerHTML = "Question " + '<b>' + currentQuestionNumber + "/" + multipleChoiceQuiz.questions.length + '</b>';
+        el.innerHTML += "\n Points: " + '<b>' + multipleChoiceQuiz.score + '</b>';
+        el.innerHTML += "<br> Wrong: " + '<b>' + ((currentQuestionNumber - 1) - multipleChoiceQuiz.score) + '</b>';
 };
 function showScores() {
     var finishedState = "<h1>Result</h1>";
@@ -45,8 +46,8 @@ function shuffleQuestions(questions) {
         this.questions[j] = x;
     }
 };
-shuffleQuestions
+shuffleQuestions();
 // create quiz
 var multipleChoiceQuiz = new quiz(questions);
-// call populate
-populate();
+// call showQuestion
+showQuestion();

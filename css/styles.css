@@ -1,5 +1,6 @@
 body {
     background-color: #83b3d8;
+    font-family: Verdana, Geneva, monospace;
 }
 .quiz-container {
     width: 80vw;
@@ -27,11 +28,9 @@ body {
     font-weight: bold;
     color: #5A6772;
 }
-
 .buttons {
     margin-top: 30px;
 }
-
 #button0, #button1, #button2, #button3, #replay-button {
     background-color: #9bc1ff;
     width: 50%;
@@ -51,7 +50,6 @@ body {
     padding: 10px 60px;
     background-color: #0d316b;
     box-shadow: 10px 10px 5px #aaaaaa;
-
 }
 #flag {
     display: block;
@@ -75,7 +73,6 @@ body {
     text-align: center;
     border-radius: 50px;
     font-size: 20px;
-    padding: 20px 20px;
     color: white;
 }
 #progress {
@@ -83,4 +80,9 @@ body {
     text-align: center;
     font-size: 18px;
     width: 20%;
+    margin: 20px;
+    padding: 5px 5px;
+    background-color: #9bc1ff;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px #aaaaaa;
 }
