@@ -1,3 +1,4 @@
+//creates the quiz object
 function quiz(questions) {
     this.score = 0;
     this.questions = questions;
@@ -6,6 +7,7 @@ function quiz(questions) {
 quiz.prototype.getCurrentQuestion = function() {
     return this.questions[this.questionIndex];
 }
+// check if the quess is correct or wrong and adds feedback to the screen
 quiz.prototype.guessInput = function(answer) {
     if(this.getCurrentQuestion().isCorrectAnswer(answer)) {
     	var correctAnswer = document.getElementById('showAnswer');
