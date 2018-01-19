@@ -47,11 +47,15 @@ body {
     position: fixed;
 }
 #landingPage h3 {
-    margin-top: 30vh;
+
     color: #000;
+} 
+#landingPage img {
+    width: 50vw;
+    height: 50vh;
 }
 #start-button {
-    margin-top: 10vh;
+
     width: 50vw;
     height: 10vh;
     border-radius: 10px;

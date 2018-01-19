@@ -1,7 +1,7 @@
 function landingPage() {
     var el = document.getElementById('landingPage');
     document.getElementById('start-quiz').style.display = "none";
-    el.innerHTML = "<div><h1>EUROPEAN FLAG QUIZ!</h1><h3>PRESS <b>PLAY</b> TO START THE QUIZ</h3><button id='start-button' onClick='showQuestion()'><h1>PLAY</h1></button></div>";
+    el.innerHTML = "<div><h1>EUROPEAN FLAG QUIZ!</h1><img src='img/cover.png'><h3>PRESS <b>PLAY</b> TO START THE QUIZ</h3><button id='start-button' onClick='showQuestion()'><h1>PLAY</h1></button></div>";
 };
 function showQuestion() {
     document.getElementById('landingPage').style.display = "none";
