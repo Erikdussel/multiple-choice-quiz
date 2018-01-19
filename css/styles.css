@@ -46,16 +46,14 @@ body {
     height: 100vh;
     position: fixed;
 }
-#landingPage h3 {
-
-    color: #000;
+#landingPage h1, h3 {
+    color: #0d316b;
 } 
 #landingPage img {
-    width: 50vw;
-    height: 50vh;
+    width: 35%;
+    height: 35%;
 }
 #start-button {
-
     width: 50vw;
     height: 10vh;
     border-radius: 10px;
