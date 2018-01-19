@@ -6,18 +6,18 @@ function quiz(questions) {
 quiz.prototype.getCurrentQuestion = function() {
     return this.questions[this.questionIndex];
 }
-quiz.prototype.guess = function(answer) {
+quiz.prototype.guessInput = function(answer) {
     if(this.getCurrentQuestion().isCorrectAnswer(answer)) {
     	var correctAnswer = document.getElementById('showAnswer');
-    	correctAnswer.style.backgroundColor = 'green';
+    	    correctAnswer.style.backgroundColor = 'green';
         var correctGuess = document.getElementById('question');
-        correctGuess.innerHTML = '<h3>CORRECTEMUNDO!</h3>';
+            correctGuess.innerHTML = '<h3>CORRECTEMUNDO!</h3>';
         this.score++;
     } else {
     	var wrongAnswer = document.getElementById('showAnswer');
-    	wrongAnswer.style.backgroundColor = 'red';
+    	    wrongAnswer.style.backgroundColor = 'red';
         var showAnswer = document.getElementById('question');
-        showAnswer.innerHTML = '<h3>WRONG! The correct answer is: ' + this.getCurrentQuestion().answer + '</h3>'
+            showAnswer.innerHTML = '<h3>WRONG! The correct answer is: ' + this.getCurrentQuestion().answer + '</h3>'
     } this.questionIndex++;
 }
 quiz.prototype.finished = function() {
