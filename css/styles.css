@@ -39,7 +39,7 @@ body {
     width: 30vw;
     padding: 10px 60px;
     background-color: #0d316b;
-    box-shadow: 10px 10px 5px #aaaaaa;
+    box-shadow: 10px 10px 5px #a9a9a9;
 }
 #landingPage {
     width: 100vw;
@@ -71,7 +71,7 @@ body {
     color: #000;
     border-radius: 10px;
     padding: 10px 10px;
-    box-shadow: 10px 10px 5px #aaaaaa;
+    box-shadow: 10px 10px 5px #a9a9a9;
 
 }
 #flag {
@@ -108,5 +108,5 @@ body {
     padding: 5px 5px;
     background-color: #9bc1ff;
     border-radius: 10px;
-    box-shadow: 10px 10px 5px #aaaaaa;
+    box-shadow: 10px 10px 5px #a9a9a9;
 }
